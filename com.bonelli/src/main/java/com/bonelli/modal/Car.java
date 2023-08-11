@@ -22,7 +22,7 @@ public class Car
     private String carMake;
     private String carName;
     private String carType;
-    private Year carModel;
+    private int carModel;
     private double carPrice;
 
         public Car(CarDTO carDTO)

@@ -1,4 +1,14 @@
-server.port=9090
+server:
+  port: 8090
 
+spring:
+  data:
+    mongodb:
+      database: course
+      host: localhost
+      port: 27017
+      repositories:
+        enabled: true
+        type: auto
 
 
