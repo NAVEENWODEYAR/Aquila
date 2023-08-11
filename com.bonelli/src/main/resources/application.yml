@@ -1,14 +1,26 @@
 server:
   port: 8090
 
+#spring:
+#  data:
+#    mongodb:
+#      database: course
+#      host: localhost
+#      port: 27017
+#      repositories:
+#        enabled: true
+#        type: auto
 spring:
-  data:
-    mongodb:
-      database: course
-      host: localhost
-      port: 27017
-      repositories:
-        enabled: true
-        type: auto
-
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driver-class-name: org.h2.Driver
+    username: root
+    password: boss
+  h2:
+    console:
+      enabled: true
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
 

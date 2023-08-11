@@ -38,7 +38,7 @@ public class CarController
             return new ResponseEntity<>(responseDTO,HttpStatus.FOUND);
         }
 
-        // 2.a Select by name,
+        /** 2.a Select by name,
         @GetMapping("/getCarByName/{carName}")
         public ResponseEntity<ResponseDTO> getCarByName(@PathVariable String carName)
         {
@@ -46,10 +46,11 @@ public class CarController
             ResponseDTO responseDTO = new ResponseDTO("Car found",car);
             return new ResponseEntity<>(responseDTO,HttpStatus.FOUND);
         }
+        */
 
         // 3. Put update the data.,
         @PutMapping("/updateCar/{id}")
-        public ResponseEntity<ResponseDTO> updateCar(@RequestBody CarDTO carDTO, @PathVariable String id)
+        public ResponseEntity<ResponseDTO> updateCar(@RequestBody CarDTO carDTO, @PathVariable int id)
         {
             Car car = carService.updateCar(carDTO,id);
             ResponseDTO responseDTO = new ResponseDTO("Updated successfully,",car);
@@ -58,7 +59,7 @@ public class CarController
 
         // 4. Delete for deleting the record.,
         @DeleteMapping("/deleteCar/{id}")
-        public ResponseEntity<ResponseDTO> deleteCar(@PathVariable String id)
+        public ResponseEntity<ResponseDTO> deleteCar(@PathVariable int id)
         {
             carService.deleteById(id);
             ResponseDTO responseDTO = new ResponseDTO("Deleted successfully","Car with the id:"+id);
