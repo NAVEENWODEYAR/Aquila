@@ -1,13 +1,12 @@
 package com.bonelli.dto;
 
-import jakarta.annotation.Nonnull;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
 import lombok.*;
 
 import java.time.Year;
-
+// Data Transfer Object
 @Data
 @NoArgsConstructor
 public class CarDTO
