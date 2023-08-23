@@ -10,7 +10,7 @@ function Navbar() {
   return (
       <>
       <Router>
-       <nav className='navbar navbar-dark bg-dark navbar-expand-lg'>
+       <nav className='navbar navbar-dark bg-primary navbar-expand-lg'>
            <Link to="#" className='navbar-brand' > @Bonelli </Link>
               <div className='ml-auto'>
                 <ul className='navbar-nav'>

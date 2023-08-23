@@ -1,8 +1,13 @@
 import React from 'react'
 
-function ViewBooks() {
+function ViewBooks() 
+{
   return (
-    <div>ViewBooks</div>
+    <>
+
+      // object for storing the data,
+      
+    </>
   )
 }
 
