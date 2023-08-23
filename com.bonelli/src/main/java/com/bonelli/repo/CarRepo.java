@@ -10,7 +10,7 @@ import java.util.List;
 //public interface CarRepo extends MongoRepository<Car,String>
 public interface CarRepo extends JpaRepository<Car,Integer>
 {
-    Car findByName(String name);
+    Car findByCarName(String name);
 
 //    @Query(value = "SELECT * FROM cars ORDER BY cars.carName DESC")
 //    List<Car> findByDescOrder();

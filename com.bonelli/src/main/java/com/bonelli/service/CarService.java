@@ -85,8 +85,8 @@ public class CarService
          // 6. Select by name
         public Car getCarByName(String carName)
         {
-            Car car = carRepo.findByName(carName);
-                if(carRepo.findByName(carName)==null)
+            Car car = carRepo.findByCarName(carName);
+                if(carRepo.findByCarName(carName)==null)
                 {
                     throw new CarNotFoundException("No such car with name in the database,"+carName);
                 }
