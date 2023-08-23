@@ -13,6 +13,6 @@ public interface CarRepo extends JpaRepository<Car,Integer>
     @Query(value = "SELECT * FROM cars WHERE cars.carName=carName")
     Car findByName(String carName);
 
-    @Query(value = "SELECT * FROM cars ORDER BY cars.carName DESC")
-    List<Car> findByDescOrder();
+//    @Query(value = "SELECT * FROM cars ORDER BY cars.carName DESC")
+//    List<Car> findByDescOrder();
 }
