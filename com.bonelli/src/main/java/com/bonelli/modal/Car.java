@@ -16,13 +16,14 @@ import java.time.Year;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-@Entity
-//@Document(collation = "Cars")
+//@Entity
+@Document(collation = "Cars")
 public class Car
 {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int id;
+    private String id;
+
     private int carId;
     private String carMake;
     private String carName;

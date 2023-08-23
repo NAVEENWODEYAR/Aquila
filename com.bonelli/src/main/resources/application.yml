@@ -1,26 +1,32 @@
 server:
   port: 96
 
-#spring:
-#  data:
-#    mongodb:
-#      database: course
-#      host: localhost
-#      port: 27017
-#      repositories:
-#        enabled: true
-#        type: auto
 spring:
-  datasource:
-    url: jdbc:h2:mem:boss
-    driver-class-name: org.h2.Driver
-    username: root
-    password: boss
-  h2:
-    console:
-      enabled: true
-  jpa:
-    hibernate:
-      ddl-auto: update
-    show-sql: true
+  data:
+    mongodb:
+      database: course
+      host: localhost
+      port: 27017
+      repositories:
+        enabled: true
+        type: auto
+
+  main:
+    allow:
+      bean:
+        definition:
+          overriding: true
+#spring:
+#  datasource:
+#    url: jdbc:h2:mem:boss
+#    driver-class-name: org.h2.Driver
+#    username: root
+#    password: boss
+#  h2:
+#    console:
+#      enabled: true
+#  jpa:
+#    hibernate:
+#      ddl-auto: update
+#    show-sql: true
 
