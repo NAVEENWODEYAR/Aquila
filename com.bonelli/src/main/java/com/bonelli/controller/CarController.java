@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/car")
 @CrossOrigin("http://localhost:3000")
 public class CarController
 {
@@ -31,7 +30,7 @@ public class CarController
         }
 
         // 2. Get for receiving the data
-        @GetMapping("/getCar")
+        @GetMapping("/getCars")
         public ResponseEntity<ResponseDTO> getCars()
         {
             List<Car> list = carService.getCars();

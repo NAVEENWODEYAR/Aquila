@@ -1,21 +1,17 @@
 server:
-  port: 9686
+  port: 96
 
 spring:
   data:
     mongodb:
-      database: course
+      database: car
       host: localhost
       port: 27017
       repositories:
         enabled: true
         type: auto
 
-  main:
-    allow:
-      bean:
-        definition:
-          overriding: true
+
 #spring:
 #  datasource:
 #    url: jdbc:h2:mem:boss
