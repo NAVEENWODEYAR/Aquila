@@ -47,7 +47,7 @@ public class CarService
                 }
         }
 
-        // 4. Delete by id
+        // 4. Delete the record by id
         public void deleteById(int id)
         {
             Optional<Car> car = carRepo.findById(id);
@@ -82,16 +82,16 @@ public class CarService
                 }
         }
 
-        // 6. Select by name
-//        public Car getCarByName(String carName)
-//        {
-//            Car car = carRepo.findByName(carName);
-//                if(carRepo.findByName(carName)==null)
-//                {
-//                    throw new CarNotFoundException("No such car with name in the database,"+carName);
-//                }
-//                else
-//                    return car;
-//        }
+         // 6. Select by name
+        public Car getCarByName(String carName)
+        {
+            Car car = carRepo.findByName(carName);
+                if(carRepo.findByName(carName)==null)
+                {
+                    throw new CarNotFoundException("No such car with name in the database,"+carName);
+                }
+                else
+                    return car;
+        }
 
 }

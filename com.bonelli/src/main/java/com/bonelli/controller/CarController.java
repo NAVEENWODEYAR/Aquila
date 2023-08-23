@@ -38,7 +38,7 @@ public class CarController
             return new ResponseEntity<>(responseDTO,HttpStatus.FOUND);
         }
 
-        /** 2.a Select by name,
+        // 2.a Select by name,
         @GetMapping("/getCarByName/{carName}")
         public ResponseEntity<ResponseDTO> getCarByName(@PathVariable String carName)
         {
@@ -46,7 +46,7 @@ public class CarController
             ResponseDTO responseDTO = new ResponseDTO("Car found",car);
             return new ResponseEntity<>(responseDTO,HttpStatus.FOUND);
         }
-        */
+
 
         // 3. Put update the data.,
         @PutMapping("/updateCar/{id}")
