@@ -13,7 +13,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/car")
-@CrossOrigin
+@CrossOrigin("http://localhost:3000")
 public class CarController
 {
     // DI of the service object.,
