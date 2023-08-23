@@ -4,7 +4,7 @@ server:
 spring:
   data:
     mongodb:
-      database: car
+      database: cars
       host: localhost
       port: 27017
       repositories:
