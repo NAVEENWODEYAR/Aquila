@@ -11,7 +11,7 @@ const ViewBooks = () => {
 
   // fetch the data from the database,
     let getCarsdData = async()=>{
-        const result = await axios.get('http://localhost:96/getCars',{ maxRedirects: 0,});
+        const result = await axios.get('http://localhost:8475/bike/getBikes',{ maxRedirects: 0,});
         console.log(result.data)
     }
 
