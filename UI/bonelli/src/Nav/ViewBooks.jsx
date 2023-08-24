@@ -20,6 +20,7 @@ const ViewBooks = () => {
 
   return (
     <>
+    <h1>{JSON.stringify(cars)}</h1>
       <div className="container">
         <div className="py-4">
           <table className="table border shadow">
