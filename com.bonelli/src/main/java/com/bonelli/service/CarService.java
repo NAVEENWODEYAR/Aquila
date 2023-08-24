@@ -31,7 +31,7 @@ public class CarService {
     }
 
     // 3. Select * fom table Where id = __
-    public Optional<Car> getCar(String id) {
+    public Optional<Car> getCar(int id) {
         Optional<Car> car = carRepo.findById(id);
         if (car.isPresent()) {
             return car;
@@ -41,7 +41,7 @@ public class CarService {
     }
 
     // 4. Delete the record by id
-    public void deleteById(String id) {
+    public void deleteById(int id) {
         Optional<Car> car = carRepo.findById(id);
         if (car.isPresent()) {
             carRepo.deleteById(id);
@@ -51,7 +51,7 @@ public class CarService {
     }
 
     // 5. update the record.,
-    public Car updateCar(CarDTO carDTO, String id) {
+    public Car updateCar(CarDTO carDTO, int id) {
         Car car = carRepo.findById(id).get();
         if (carRepo.findById(id).isPresent()) {
             car.setCarId(carDTO.getCarId());

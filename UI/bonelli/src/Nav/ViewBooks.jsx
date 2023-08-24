@@ -11,7 +11,7 @@ const ViewBooks = () => {
 
   // fetch the data from the database,
   let getCarsdData = async () => {
-    let result = await axios.get('http://localhost:9090/getBookData');    // ,{ maxRedirects: 0,}
+    let result = await axios.get('http://localhost:8080/getBookData');    // ,{ maxRedirects: 0,}
     console.log(result.data);
     setCars(result.data)
   }
@@ -48,7 +48,7 @@ const ViewBooks = () => {
                     })
                   }
                 </> :
-                <h2> No data in the database,</h2>
+                <h2> No data found  in the database,</h2>
               }
              
             </tbody>

@@ -8,9 +8,8 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
-@Repository
-public interface CarRepo extends MongoRepository<Car,String>
-//public interface CarRepo extends JpaRepository<Car,Integer>
+//public interface CarRepo extends MongoRepository<Car,String>
+public interface CarRepo extends JpaRepository<Car,Integer>
 {
     Car findByCarName(String name);
 

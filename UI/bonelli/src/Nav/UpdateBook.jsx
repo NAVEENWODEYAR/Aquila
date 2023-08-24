@@ -10,7 +10,7 @@ const UpdateBook = () => {
 
   // get the data from the databse.,
   let booksData = async () => {
-        let result = await axios.get("http://localhost:1234/book/getBooks");
+        let result = await axios.get("http://localhost:96/getCars");
         console.log(result.data);
         setBooks(result.data);
   }

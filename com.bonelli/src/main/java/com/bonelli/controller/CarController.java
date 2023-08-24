@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-//@CrossOrigin("http://localhost:3000")
+@CrossOrigin("http://localhost:3000")
 public class CarController
 {
     // DI of the service object.,
@@ -50,7 +50,7 @@ public class CarController
 
         // 3. Put update the data.,
         @PutMapping("/updateCar/{id}")
-        public ResponseEntity<ResponseDTO> updateCar(@RequestBody CarDTO carDTO, @PathVariable String id)
+        public ResponseEntity<ResponseDTO> updateCar(@RequestBody CarDTO carDTO, @PathVariable int id)
         {
             Car car = carService.updateCar(carDTO,id);
             ResponseDTO responseDTO = new ResponseDTO("Updated successfully,",car);
@@ -59,7 +59,7 @@ public class CarController
 
         // 4. Delete for deleting the record.,
         @DeleteMapping("/deleteCar/{id}")
-        public ResponseEntity<ResponseDTO> deleteCar(@PathVariable String id)
+        public ResponseEntity<ResponseDTO> deleteCar(@PathVariable int id)
         {
             carService.deleteById(id);
             ResponseDTO responseDTO = new ResponseDTO("Deleted successfully","Car with the id:"+id);
