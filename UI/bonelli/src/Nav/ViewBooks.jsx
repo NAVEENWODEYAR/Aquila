@@ -43,6 +43,15 @@ const ViewBooks = () => {
                 <td>2028</td>
                 <td>5000000</td>
               </tr>
+              <tr>
+                <td>1</td>
+                <td>12</td>
+                <td>Ford</td>
+                <td>Mustang</td>
+                <td>SUV</td>
+                <td>2028</td>
+                <td>5000000</td>
+              </tr>
             </tbody>
           </table>
         </div>
