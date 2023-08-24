@@ -4,16 +4,17 @@ import axios from 'axios';
 const ViewBooks = () => {
 
   // object to store the data,
-    const [cars,setCars] = useState([]);
+  const [cars, setCars] = useState([]);
 
   // to render page each time
-    useEffect(()=> {getCarsdData()},[])
+  useEffect(() => { getCarsdData() }, [])
 
   // fetch the data from the database,
-    let getCarsdData = async()=>{
-        const result = await axios.get('http://localhost:8475/bike/getBikes',{ maxRedirects: 0,});
-        console.log(result.data)
-    }
+  let getCarsdData = async () => {
+    let result = await axios.get('http://localhost:9090/getBookData');    // ,{ maxRedirects: 0,}
+    console.log(result.data);
+    setCars(result.data)
+  }
 
 
 
@@ -24,34 +25,31 @@ const ViewBooks = () => {
           <table className="table border shadow">
             <thead>
               <tr>
-                <th scope="col">Serial No</th>
-                <th scope="col">Car Id</th>
-                <th scope="col">Company Name</th>
-                <th scope="col">Car Name</th>
-                <th scope="col">Car Type</th>
-                <th scope="col">Car Model</th>
-                <th scope="col">Car Price</th>
+                <th scope="col">Book Id</th>
+                <th scope="col">Book Name</th>
+                <th scope="col">Book Price</th>
+                <th scope="col">Book Author</th>
+                <th scope="col">Book Mail</th>
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td>1</td>
-                <td>12</td>
-                <td>Ford</td>
-                <td>Mustang</td>
-                <td>SUV</td>
-                <td>2028</td>
-                <td>5000000</td>
-              </tr>
-              <tr>
-                <td>1</td>
-                <td>12</td>
-                <td>Ford</td>
-                <td>Mustang</td>
-                <td>SUV</td>
-                <td>2028</td>
-                <td>5000000</td>
-              </tr>
+              {cars.length > 0 ?
+                <>
+                  {
+                    cars.map((car)=>{
+                      return  <tr>
+                                  <td>{car.bId}</td>
+                                  <td>{car.bName}</td>
+                                  <td>{car.bPrice}</td>
+                                  <td>{car.bAuthor}</td>
+                                  <td>{car.aMail}</td>
+                                </tr>
+                    })
+                  }
+                </> :
+                <h2> No data in the database,</h2>
+              }
+             
             </tbody>
           </table>
         </div>
