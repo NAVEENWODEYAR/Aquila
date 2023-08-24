@@ -17,7 +17,7 @@ import java.time.Year;
 @NoArgsConstructor
 @Data
 //@Entity
-@Document(Collection="")
+@Document(collection = "Luxury Cars")
 public class Car
 {
     @Id
