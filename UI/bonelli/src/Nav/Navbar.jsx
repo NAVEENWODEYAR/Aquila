@@ -5,6 +5,7 @@ import ViewBooks from './ViewBooks';
 import UpdateBook from './UpdateBook';
 import DeleteBook from './DeleteBook';
 import AboutUs from './AboutUs';
+import Home from './Home';
 
 function Navbar() {
   return (
@@ -14,7 +15,7 @@ function Navbar() {
            <Link to="#" className='navbar-brand' > @Bonelli </Link>
               <div className='ml-auto'>
                 <ul className='navbar-nav'>
-                    <li className='nav-list'> <Link to='#' className='nav-link'> Home </Link></li>
+                    <li className='nav-list'> <Link to='/Home' className='nav-link'> Home </Link></li>
                     <li className='nav-list'> <Link to='/AddBook' className='nav-link'> AddBooks </Link></li>
                     <li className='nav-list'> <Link to='ViewBook' className='nav-link'> ViewBooks </Link></li>
                     <li className='nav-list'> <Link to='UpdateBook' className='nav-link'> UpdateBook </Link></li>
@@ -25,6 +26,7 @@ function Navbar() {
        </nav>
 
           <Routes>
+            <Route path='/Home' element={<Home/>} />
             <Route path='/AddBook' element={<AddBook/>} />
             <Route path='/ViewBook' element={<ViewBooks/>} />
             <Route path='/UpdateBook' element={<UpdateBook/>} />
