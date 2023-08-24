@@ -9,6 +9,8 @@ import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.Type;
+import org.hibernate.validator.constraints.UUID;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.time.Year;
@@ -16,13 +18,13 @@ import java.time.Year;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-//@Entity
-@Document(collection = "Luxury Cars")
+@Entity(name = "Luxury Cars")
+//@Document(collection = "Luxury Cars")
 public class Car
 {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private String id;
+    private int id;
 
     private int carId;
     private String carMake;

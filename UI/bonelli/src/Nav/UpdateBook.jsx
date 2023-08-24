@@ -1,8 +1,25 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import axios from 'axios';
+const UpdateBook = () => {
 
-function UpdateBook() {
-  return (
-    <div>UpdateBook</div>
+  // to store the data in 
+  const[book,setBooks] = useState([]);
+
+  // render the page each time,
+  useEffect(()=> {},[]);
+
+  // get the data from the databse.,
+  let booksData = async () => {
+        let result = await axios.get("http://localhost:1234/book/getBooks");
+        console.log(result.data);
+        setBooks(result.data);
+  }
+
+
+  return(
+    <>
+
+    </>
   )
 }
 
