@@ -49,7 +49,7 @@ const UpdateBook = () => {
                     })
                   }
                 </>
-                :<h2> No data in the database.., </h2>
+                :<h2> No data found in the database </h2>
               }
             </tbody>
           </table>
