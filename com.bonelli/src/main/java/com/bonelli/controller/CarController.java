@@ -25,7 +25,7 @@ public class CarController
         public ResponseEntity<ResponseDTO> insertCar(@Valid @RequestBody CarDTO carDTO)
         {
             Car car = carService.insertCar(carDTO);
-            ResponseDTO responseDTO = new ResponseDTO("Car details successfully saved into the table,",car);
+            ResponseDTO responseDTO = new ResponseDTO("Car '{}' details successfully saved into the table,",car);
             return new ResponseEntity<>(responseDTO, HttpStatus.ACCEPTED);
         }
 
@@ -43,7 +43,7 @@ public class CarController
         public ResponseEntity<ResponseDTO> getCarByName(@PathVariable String carName)
         {
             Car car = carService.getCarByName(carName);
-            ResponseDTO responseDTO = new ResponseDTO("Car found",car);
+            ResponseDTO responseDTO = new ResponseDTO("Car details found",car);
             return new ResponseEntity<>(responseDTO,HttpStatus.FOUND);
         }
 
