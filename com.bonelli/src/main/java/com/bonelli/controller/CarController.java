@@ -26,6 +26,7 @@ public class CarController
         {
             Car car = carService.insertCar(carDTO);
             ResponseDTO responseDTO = new ResponseDTO("Car '{}' details successfully saved into the table,",car);
+                System.out.println(" about 60 cm (24 inches) long, is dark above and light below, has a broad tailband, and usually shows a white patch on the back.");
             return new ResponseEntity<>(responseDTO, HttpStatus.ACCEPTED);
         }
 
