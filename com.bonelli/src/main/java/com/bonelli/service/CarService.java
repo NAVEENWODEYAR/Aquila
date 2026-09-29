@@ -71,7 +71,7 @@ public class CarService {
     public Car getCarByName(String carName) {
         Car car = carRepo.findByCarName(carName);
         if (carRepo.findByCarName(carName) == null) {
-            throw new CarNotFoundException("No such car with name in the database," + carName);
+            throw new CarNotFoundException("No such car record with name in the database," + carName);
         } else
             return car;
     }
